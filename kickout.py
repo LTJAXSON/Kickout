@@ -124,6 +124,7 @@ def Check_if_root():
                         print(colored("Please, wait a few seconds for the scan to finish", "green"))
                         execute_command(f"airodump-ng {chosen_interface} --write out", timeout=15)
                         csv_file = "out-01.csv"
+                        os.system("reset")
                         print_network_details(csv_file)
                         #execute_airodump(chosen_interface, bssid, channel)
                         #execute_aireplay(chosen_interface, bssid)
